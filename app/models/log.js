@@ -54,7 +54,7 @@ export default Ember.Object.extend({
       }
     }).then((json) => {
       this.loadParts(json['log_parts']);
-      this.set('plainTextUrl', json['@raw_url']);
+      this.set('plainTextUrl', json['@raw_log_href']);
     });
   },
 
