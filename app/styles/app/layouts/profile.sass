@@ -1,12 +1,22 @@
 .profile-page
   display: flex
+  @media (max-width: 600px)
+    flex-flow: column-reverse
 
 .profile-main
   flex-grow: 1
 
 .profile-orglist
-  flex: 0 0 290px
-  margin-right: 55px
+  flex: 0 0 200px
+  margin-right: 20px
+
+  @media #{$medium-up}
+    flex: 0 0 290px
+    margin-right: 55px
+
+  @media (max-width: 600px)
+    margin-top: 55px
+
 
 .profile-header
   display: flex
@@ -36,6 +46,11 @@
     padding: 0 1em 0 2.8em
     @media #{$medium-up}
       text-align: left
+
+.profile-orgs
+  ul
+    padding: 0
+    margin: 0
 
 .profile-repositorylist
   @include resetul
